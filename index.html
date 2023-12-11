@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>MVP - Sprint 1</title>
+</head>
+
+<body>
+    <!-- Cabeçalho de informações do sistema -->
+    <header>
+        <div class="title">
+            <h2>Gestão de Gastos</h2>
+        </div>
+    </header>
+
+    <section id="secRegistros">
+        <h3>Cadastro de Novo Gasto</h3>
+
+        <div id="newRegistro">
+            <div class="formfield">
+                <label class="labelNewRegistro" for="newTitulo">Valor:</label>
+                <input type="text" id="newTitulo" name="newTitulo" placeholder="Qual valor?">
+            </div>
+
+            <div class="formfield">
+                <label class="labelNewRegistro" for="newDataRegistro">Data:</label>
+                <input type="text" id="newDataRegistro" name="newDataRegistro" placeholder="dd/mm/yyyy">
+            </div>
+
+            <label class="labelNewRegistro" for="newDescricao">Classificação:</label>
+            <textarea id="newDescricao" name="newDescricao" maxlength="1500"
+                placeholder="Defina a classificação (mercado, conta de luz...)"></textarea>
+
+            <span onclick="newItem()" class="addBtn">Incluir</span>
+        </div>
+    </section>
+
+    <!-- Tabela com todos os gastos -->
+    <section class="items">
+        <table id="cadastroDeGastos">
+            <tr class="firstrow-experiencia">
+                <th>Gasto</th>
+                <th>Valor</th> 
+                <th>Data</th>
+                
+                <th><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15px" height="15px"></th>
+            
+            </tr>
+        </table>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
